@@ -193,19 +193,19 @@ $(function(){
 	});
 	//-----------------------------------
 	//------풀브라우징 및 모바일 GNB 제어--
-	$('.gnb-wrap, .gnb-modile').on('click keypress','a',function(){
+	$('.gnb-wrap, .gnb-modile, .message-background').on('click keypress','a',function(){
 		var gnb_index = $(this).parent('li').data('index');
 		var art_index = gnb_index;
 		var topminus;
 		if($('.header').width()>1063){
-			topminus = 99;
+			topminus = 279;
 		}else{
-			topminus = 99;
+			topminus = 279;
 		};
 		$language.removeClass('on');
 		$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
 		$('.gnb-wrap, .gnb-modile').find('.gnb-'+gnb_index).children('a').addClass('on');
-		$('body, html').stop().animate({ scrollTop: $('.article_'+art_index).offset().top-topminus },300);
+		$('body, html').stop().animate({ scrollTop: $('.article_'+art_index).find('.contents').find('.slogan-box').offset().top-topminus },300);
 	});
 	//----------------------------------
 	//-----외부컨탠츠 가져오기------------
