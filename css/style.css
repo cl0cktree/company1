@@ -174,9 +174,9 @@ textarea{box-sizing:border-box;}
 .section .article .contents .graph .graph-img .img-wrap .chart-analysis .analysis-title span{color:#2aa4e1;}
 .section .article .contents .graph .graph-img .img-wrap .chart-analysis .analysis-box{padding:10px 40px 25px;}
 
-.section .article .contents .graph .graph-img .img-wrap .chart-need{width:100%;min-height:120px;background:#d9d9d9;margin-top:45px;color:#6c6c6c;font-size:17px;text-align:left;}
-.section .article .contents .graph .graph-img .img-wrap .chart-need .need-box{min-height:120px;line-height:120px;}
-.section .article .contents .graph .graph-img .img-wrap .chart-need .need-box span{color:#2aa4e1;}
+.section .article .contents .graph .graph-img .img-wrap .chart-need{width:100%;min-height:120px;margin-top:45px;color:#6c6c6c;font-size:17px;text-align:left;}
+.section .article .contents .graph .graph-img .img-wrap .chart-need .need-box{background:#d9d9d9;min-width:320px;min-height:120px;line-height:20px;padding:50px 0 0 45px;margin-bottom:10px;}
+.section .article .contents .graph .graph-img .img-wrap .chart-need .need-box span{position:absolute;color:#2aa4e1;top:50px;left:26px;}
 
 .section .article .contents .graph .graph-img .circle{max-width:640px;margin:80px auto 0;}
 
