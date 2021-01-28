@@ -88,23 +88,23 @@ $(function(){
 							$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
 							$('.gnb-wrap, .gnb-modile').find('.gnb-'+scm).children('a').addClass('on');
 							// console.log(scm);
-							if ($(this).find('.contents')){
-								$(this).find('.contents').children('h3').stop().animate({'top':'0','opacity':'1'},300,function(){
-									$container_this = $(this);
-									// console.log($container_this);
-									$container_this.siblings('.vision, .mission').css({'margin-left':'auto','margin-right':'auto','opacity':'1'});
-									$container_this.parent().find('.board_ceo').stop().animate({'opacity':'1'},300);
-									$container_this.parent().find('.qna-board').stop().animate({'opacity':'1'},300);
-									$container_this.parent().find('.card').css({'margin-left':'0','opacity':'1'},function(){
-									});
-								});
-							}
-							if($(window).scrollTop()>=$('.graph-1').offset().top-100){
-								$('.graph-1').find('.graph-img').css({'opacity':'1'});
-							};
-							if ($(window).scrollTop()>=$('.graph-2').offset().top-100){
-								$('.graph-2').find('.graph-img').css({'opacity':'1'});
-							};
+							// if ($(this).find('.contents')){
+							// 	$(this).find('.contents').children('h3').stop().animate({'top':'0','opacity':'1'},300,function(){
+							// 		$container_this = $(this);
+							// 		// console.log($container_this);
+							// 		$container_this.siblings('.vision, .mission').css({'margin-left':'auto','margin-right':'auto','opacity':'1'});
+							// 		$container_this.parent().find('.board_ceo').stop().animate({'opacity':'1'},300);
+							// 		$container_this.parent().find('.qna-board').stop().animate({'opacity':'1'},300);
+							// 		$container_this.parent().find('.card').css({'margin-left':'0','opacity':'1'},function(){
+							// 		});
+							// 	});
+							// }
+							// if($(window).scrollTop()>=$('.graph-1').offset().top-100){
+							// 	$('.graph-1').find('.graph-img').css({'opacity':'1'});
+							// };
+							// if ($(window).scrollTop()>=$('.graph-2').offset().top-100){
+							// 	$('.graph-2').find('.graph-img').css({'opacity':'1'});
+							// };
 						}
 					});
 				}else{
