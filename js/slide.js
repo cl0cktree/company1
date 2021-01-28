@@ -42,12 +42,12 @@ $(function(){
 				if($('.slide-wrap').height()==0||$('.slide-wrap').height()==null){
 					$(document).ready(function(){
 							// if ($('body').width>720){
-							// 	msheight = $('.slide').children('img').height();
+							// 	msheight = msheight = $('.slide').children('img').height()+90;
 							// }
 							// else{
 							// 	msheight = '100vh';
 							// }
-							msheight = $('.slide').children('img').height();
+							msheight = $('.slide').children('img').height()+90;
 							article_height = $('.article').height();
 							$('.slide-wrap').css({'height':msheight});
 						}
@@ -80,12 +80,12 @@ $(function(){
 			app_sort = mswidth+1;
 
 			// if ($('body').width>720){
-			// 	msheight = $('.slide').children('img').height();
+			// 	msheight = msheight = $('.slide').children('img').height()+90;
 			// }
 			// else{
 			// 	msheight = '100vh';
 			// }
-			msheight = $('.slide').children('img').height();
+			msheight = msheight = $('.slide').children('img').height()+90;
 
 			$(window).resize(function(){
 				var delay_time;
@@ -93,12 +93,12 @@ $(function(){
 					delay_time = setTimeout(function() {
 						delay_time=null;
 						// if ($('body').width>720){
-						// 	msheight = $('.slide').children('img').height();
+						// 	msheight = msheight = $('.slide').children('img').height()+90;
 						// }
 						// else{
 						// 	msheight = '100vh';
 						// }
-						msheight = $('.slide').children('img').height();
+						msheight = msheight = $('.slide').children('img').height()+90;
 						var mswidth = $('.slide').each(Array).length;/*-슬라이드 전체 배열의 갯수만큼의 숫자를 추출-*/
 						wrapwidth = mswidth*100;
 						s_width = $('.slide').width();
@@ -506,12 +506,12 @@ $(function(){
 				if($('.slide-wrap').height()==0){
 					$(document).ready(function(){
 						// if ($('body').width>720){
-						// 	msheight = $('.slide').children('img').height();
+						// 	msheight = msheight = $('.slide').children('img').height()+90;
 						// }
 						// else{
 						// 	msheight = '100vh';
 						// }
-						msheight = $('.slide').children('img').height();
+						msheight = msheight = $('.slide').children('img').height()+90;
 						article_height = $('.article').height();
 						$('.slide-wrap').css({'height':msheight});
 						// console.log(msheight+' --')
