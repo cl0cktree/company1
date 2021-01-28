@@ -85,17 +85,6 @@ $(function(){
 							var scm = $(this).attr('data-index');
 							var $container_this;
 							var $graph_this;
-							function contents_draw(){
-								if ($container_this.parent('.article').find('.top-pop')){
-									$container_this.parent('.article').find('.top-pop').stop().animate({'top':'0','opacity':'1'},draw_speed);
-								}else if($container_this.parent('.article').find('.bottom-pop')){
-									$container_this.parent('.article').find('.bottom-pop').stop().animate({'bottom':'0','opacity':'1'},draw_speed);
-								}else if($container_this.parent('.article').find('.left-pop')){
-									$container_this.parent('.article').find('.left-pop').stop().animate({'left':'0','opacity':'1'},draw_speed);
-								}else if($container_this.parent('.article').find('.right-pop')){
-									$container_this.parent('.article').find('.right-pop').stop().animate({'right':'0','opacity':'1'},draw_speed);
-								}
-							};
 							$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
 							$('.gnb-wrap, .gnb-modile').find('.gnb-'+scm).children('a').addClass('on');
 							// console.log(scm);

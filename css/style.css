@@ -148,10 +148,10 @@ textarea{box-sizing:border-box;}
 .section .article .contents .slogan-box_4 .line-box{border:2px solid #2aa4e1;}
 .section .article .contents .slogan-box_4 .line-box .slogan_color{color:#2aa4e1;}
 
-.section .article .contents.top-pop{top:-100%;}
-.section .article .contents.bottom-pop{bottom:-100%;}
-.section .article .contents.left-pop{left:-100%;}
-.section .article .contents.right-pop{right:-100%;}
+.section .article .contents.top-pop{top:0;}
+.section .article .contents.bottom-pop{bottom:0;}
+.section .article .contents.left-pop{left:0;}
+.section .article .contents.right-pop{right:0;}
 
 .section .article .contents .card-wrap{height:100%;padding: 20px 0;}
 .section .article .contents .card{word-break:keep-all;margin-top:0px;color:#24242d;border-bottom:0px solid #ccc;float:none;margin-left:-70%;opacity:0;}
