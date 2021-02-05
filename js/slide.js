@@ -12,7 +12,7 @@ $(function(){
 		var sort_index;
 		var app_sort;
 		var slideNum=0;
-		var jsonLocation = './data/slide_data.json';
+		var jsonLocation = './data/slide_data_youtube.json';
 		var sort_slide;
 		var item_img;
 		var thum_width;
@@ -118,6 +118,8 @@ $(function(){
 								$('.video_play video').css({'margin':'0'});
 							};
 						};
+						var youtube_height=$('.video_play').width()*0.5625;
+						$('.youtube_play').css({'height':youtube_height});
 					},framespeed);
 				}
 			});
@@ -498,7 +500,8 @@ $(function(){
 			});
 
 			$('.movei-btn').on('click touchstart',function(){
-				click_move();
+				// click_move();
+				click_move_youtube();
 				// console.log($('body').find('.video_play').length);
 			});
 
@@ -832,6 +835,31 @@ $(function(){
 					});
 				});
 			};
+
+			function click_move_youtube(){
+				var load_video;
+				var movei_index;
+				var time_left;
+				var play_info;
+				var video_play;
+				$('.background-filter').stop().fadeIn('300').addClass('on');
+				if(sort_index==1){
+					movei_index = '1';
+				}
+				$('.background-filter').css({'z-index':'200'});
+				$.getJSON(jsonLocation, function(data){
+					$.each(data, function(I, item){
+						if (movei_index == item.index){
+							/*---생성---*/
+							$('.background-filter').append('<div class="video_play" id="video_play"><h1>'+item.alt_text+slideNum+'</h1><a href="javascript:;" class="close-btn"><img src="./images/closebtn.png" alt="동영상 닫기"></a>\
+							<iframe class="youtube_play" src="'+item.video_url+'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>');
+							var youtube_height=$('.video_play').width()*0.5625;
+							$('.youtube_play').css({'height':youtube_height});
+						}
+					});
+				});
+			};
+
 			function start_s(){
 				setTimeout(lazy_0,0);
 				stop_next();
