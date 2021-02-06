@@ -91,7 +91,7 @@ textarea{box-sizing:border-box;}
 .header .nav .gnb-wrap li{display:block;box-sizing:border-box;width:13%;float:right;text-align:right;margin-left:3%;margin-right:0;word-break:keep-all;overflow:hidden;}
 .header .nav .gnb-wrap .gnb-4{margin-left:10%;}
 .header .nav .gnb-wrap .gnb-5{width:10%;margin-left:0;}
-.header .nav .gnb-wrap li a{display:block;position:relative;font-weight:600;color:#959595;text-decoration:none;float:right;}
+.header .nav .gnb-wrap li a{display:block;position:relative;font-weight:600;color:#959595;text-decoration:none;text-align:center;float:none;}
 .header .nav .gnb-wrap li a:hover:before{width:100%;height:5px;left:0%;transition:all 0.3s;z-index:1;}
 .header .nav .gnb-wrap .gnb-1 a:hover:before{background:#30a7e2;}
 .header .nav .gnb-wrap .gnb-2 a:hover:before{background:#3fcc60;}
