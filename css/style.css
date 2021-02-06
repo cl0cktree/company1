@@ -88,7 +88,7 @@ textarea{box-sizing:border-box;}
 .header .nav .top-logo a img{width:100%;}
 
 .header .nav .gnb-wrap{width:calc(100% - 265px);height:70px;line-height:70px;float:right;margin-right:100px;transition:all 0.2s;}
-.header .nav .gnb-wrap>li{display:block;box-sizing:border-box;width:15%;float:right;text-align:center;margin-left:3%;margin-right:0;word-break:keep-all;overflow:hidden;}
+.header .nav .gnb-wrap>li{display:block;box-sizing:border-box;width:15%;float:right;text-align:center;margin-left:3%;margin-right:0;word-break:keep-all;}
 .header .nav .gnb-wrap .gnb-1{width:20%;min-width:152px;}
 .header .nav .gnb-wrap .gnb-2{width:10%;min-width:79px;}
 .header .nav .gnb-wrap .gnb-3{width:20%;min-width:170px;}
