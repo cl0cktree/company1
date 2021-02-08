@@ -202,7 +202,7 @@ $(function(){
 							}
 							$('.depth_wrap').find('a').removeClass();
 							$('.depth_wrap_'+marker_split_0).find('.depth_'+marker_split_1).find('a').addClass(color_add);
-							console.log($(marker_split));
+							// console.log($(marker_split));
 						}
 					});
 					return false;
