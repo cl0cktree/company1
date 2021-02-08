@@ -242,6 +242,8 @@ $(function(){
 			}else{
 				if ((sel_lang=='Eng')||(sel_lang=='Chi')){
 					alert('준비 중 입니다.');
+					$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
+					$('.depth_wrap').children('li').children('a').removeClass();
 					sel_lang = 'Kor';
 					$('.language, .language-mobile').find('a:eq(0)').html(sel_lang);
 				}
@@ -331,6 +333,8 @@ $(function(){
 		$('.gnb-wrap, .gnb-modile').find('.gnb-'+gnb_index).children('a').addClass('on');
 		if ((gnb_index=='4')||(gnb_index=='5')){
 			alert('준비 중 입니다.');
+			$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
+			$('.depth_wrap').children('li').children('a').removeClass();
 		}else{
 			if (String(gnb_index).length==1){
 				if (gnb_index=='1'){
@@ -363,6 +367,8 @@ $(function(){
 					menu_color();
 				}else{
 					alert('준비 중 입니다.');
+					$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
+					$('.depth_wrap').children('li').children('a').removeClass();
 				}
 				function menu_color(){
 					$(this).addClass(color_add);
