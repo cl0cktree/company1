@@ -241,6 +241,7 @@ $(function(){
 		console.log($(this));
 		$('.depth_wrap').children('li').children('a').removeClass();
 		$(this).siblings('.depth_wrap').children('li:eq(0)').children('a').addClass(color_add);
+		history.pushState(null,null,this_url);
 		history.pushState(null,null,this_url+'/'+url_add);
 	});
 	//----------------------------------
