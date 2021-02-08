@@ -55,7 +55,7 @@ $(function(){
 						}
 					});
 					$name_header.stop().animate({'height':'70px'},50,function(){
-						$('.depth_wrap').stop().fadeOut(200).animate({'margin-top':'-50%','opacity':'0'});
+						$('.gnb-wrap').find('.depth_wrap').stop().fadeOut(200).animate({'margin-top':'-50%','opacity':'0'});
 					});
 					// if($('.nav').width()==$(window).width()){
 					// 	pc_ham = 20;
@@ -175,18 +175,19 @@ $(function(){
 			$('.menu_btn').removeClass('mobile');
 			if ($('.header').width()>1063){
 				$name_header.stop().animate({'height':'70px'},50,function(){
-					$('.depth_wrap').stop().fadeOut(200).animate({'margin-top':'0','opacity':'0'});
+					$('.gnb-wrap').find('.depth_wrap').stop().fadeOut(200).animate({'margin-top':'0','opacity':'0'});
 				});
 			}else{
 				$name_header.find('.mobile-menu').stop().animate({'right':'-100%'},function(){
 					$('.background-filter').stop().fadeOut('300').removeClass('on');
+					// $('.gnb-modile').find('.depth_wrap').stop()
 				});
 			};
 		}else{
 			if ($('.header').width()>1063){
 				$('.menu_btn').addClass('mobile');
 				$name_header.stop().animate({'height':'225px'},50,function(){
-					$('.depth_wrap').stop().fadeIn(200).animate({'margin-top':'0','opacity':'1'});
+					$('.gnb-wrap').find('.depth_wrap').stop().fadeIn(200).animate({'margin-top':'0','opacity':'1'});
 				});
 			}else{
 				$('.menu_btn').addClass('mobile');
@@ -215,6 +216,9 @@ $(function(){
 		var gnb_index = $(this).parent('li').data('index');
 		var art_index = gnb_index;
 		var topminus;
+		var color_add;
+		var url_add;
+		var this_url = location.href;
 		if($('.header').width()>1063){
 			topminus = 249;
 		}else{
@@ -224,6 +228,20 @@ $(function(){
 		$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
 		$('.gnb-wrap, .gnb-modile').find('.gnb-'+gnb_index).children('a').addClass('on');
 		$('body, html').stop().animate({ scrollTop: $('.article_'+art_index).find('.contents').find('.slogan-box').offset().top-topminus },300);
+		if (gnb_index=='1'){
+			color_add = 'color_blue';
+			url_add = 'direction'
+		}else if(gnb_index=='2'){
+			color_add = 'color_green';
+			url_add = 'kind'
+		}else if(gnb_index=='3'){
+			color_add = 'color_navy';
+			url_add = 'introduce'
+		}
+		console.log($(this));
+		$('.depth_wrap').children('li').children('a').removeClass();
+		$(this).siblings('.depth_wrap').children('li:eq(0)').children('a').addClass(color_add);
+		history.pushState(null,null,this_url+'/'+url_add);
 	});
 	//----------------------------------
 	//-----외부컨탠츠 가져오기------------
