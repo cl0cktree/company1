@@ -316,7 +316,7 @@ $(function(){
 	});
 	//-----------------------------------
 	//------풀브라우징 및 모바일 GNB 제어--
-	$('.gnb-wrap, .gnb-modile, .message-background').on('click keypress','a',function(){
+	$('.gnb-wrap, .gnb-modile, .message-background, .message-background-mobile').on('click keypress','a',function(){
 		var gnb_index = $(this).parent('li').data('index');
 		var art_index = gnb_index;
 		var topminus;

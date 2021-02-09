@@ -30,7 +30,7 @@ $(function(){
 
 				$randing_animate.find('.randing_1').stop().animate({'opacity':'1','z-index':'1'},'300');
 				$catch_wrap.find('.catch-1').stop().animate({'opacity':'1','z-index':'1'},'300');
-				$message_background.find('.message-1').stop().animate({'opacity':'1','z-index':'1'},'300');
+				$('.message-1').stop().animate({'opacity':'1','z-index':'1'},'300');
 
 				randing_on = setInterval(function(){
 					$randing_animate.find('.randing_'+back_num).stop(false,false).animate({'opacity':'0','z-index':'-1'},fadeout_time);
