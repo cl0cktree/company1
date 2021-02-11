@@ -320,12 +320,14 @@ $(function(){
 		var gnb_index = $(this).parent('li').data('index');
 		var art_index = gnb_index;
 		var topminus;
+		var top_mobile;
 		var color_add;
 		var url_add;
 		if($('.header, .header-con').width()>1063){
 			topminus = 249;
 		}else{
 			topminus = 249;
+			top_mobile = 130;
 		};
 		// $language.removeClass('on');
 		// $('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
@@ -372,7 +374,11 @@ $(function(){
 				}
 				function menu_color(){
 					$(this).addClass(color_add);
-					$('body, html').stop().animate({ scrollTop: $('.mark-'+sub_index).offset().top-topminus },300);
+					if($('.header, .header-con').width()>1063){
+						$('body, html').stop().animate({ scrollTop: $('.mark-'+sub_index).offset().top-topminus },300);
+					}else{
+						$('body, html').stop().animate({ scrollTop: $('.mark-'+sub_index).offset().top-top_mobile },300);
+					};
 				};
 			}
 		}
