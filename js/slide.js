@@ -288,13 +288,13 @@ $(function(){
 							}
 						};
 					}
-					if(yvalue>cal_height){
-						$('body, html').stop().animate({ scrollTop: $("body").offset().top+yvalue },300);
-					}else if(yvalue<cal_height){
-						if((yvalue*-1)>cal_height){
-							$('body, html').stop().animate({ scrollTop: $("body").offset().top+yvalue },300);
-						}
-					}
+					// if(yvalue>cal_height){
+					// 	$('body, html').stop().animate({ scrollTop: $("body").offset().top+yvalue },300);
+					// }else if(yvalue<cal_height){
+					// 	if((yvalue*-1)>cal_height){
+					// 		$('body, html').stop().animate({ scrollTop: $("body").offset().top+yvalue },300);
+					// 	}
+					// }
 					$('.slide-container').css({'left':updown+'%'});
 				}
 				else if (event.type=='touchend')
