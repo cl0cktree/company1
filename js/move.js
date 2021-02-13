@@ -118,6 +118,7 @@ $(function(){
 							
 							$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
 							$('.gnb-wrap, .gnb-modile').find('.gnb-'+scm).children('a').addClass('on');
+							history.pushState(null,null,fixability_url+'/#mark_'+scm+'_1');
 							// if ($(this).find('.contents')){
 							// 	$(this).find('.contents').children('h3').stop().animate({'top':'0','opacity':'1'},300,function(){
 							// 		$container_this = $(this);
@@ -202,6 +203,7 @@ $(function(){
 							}
 							$('.depth_wrap').find('a').removeClass();
 							$('.depth_wrap_'+marker_split_0).find('.depth_'+marker_split_1).find('a').addClass(color_add);
+							history.pushState(null,null,fixability_url+'/#mark_'+marker_index);
 							// console.log($(marker_split));
 						}
 					});
@@ -223,7 +225,9 @@ $(function(){
 	//--------------------------------
 	//-----top_btn 클릭시 동작-----------
 	$('.top_btn').on('click',function(){
-		$('body, html').stop().animate({ scrollTop: $('body').offset().top-100},400);
+		$('body, html').stop().animate({ scrollTop: $('body').offset().top-100},400,function(){
+			history.pushState(null,null,fixability_url+'/');
+		});
 	});
 	//----------------------------------
 	//-----스크롤시 각 article 동작------
@@ -350,6 +354,7 @@ $(function(){
 					url_add = 'introduce'
 				}
 				$(this).siblings('.depth_wrap').children('li:eq(0)').children('a').addClass(color_add);
+				history.pushState(null,null,fixability_url+'/#mark_'+gnb_index+'_1');
 				$('body, html').stop().animate({ scrollTop: $('.article_'+art_index).find('.contents').find('.slogan-box').offset().top-topminus },300);
 			}else{
 				var sub_index= $(this).parent('li').data('index');
