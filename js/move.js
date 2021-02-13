@@ -374,6 +374,7 @@ $(function(){
 				}
 				function menu_color(){
 					$(this).addClass(color_add);
+					history.pushState(null,null,fixability_url+'/#mark_'+sub_index);
 					if($('.header, .header-con').width()>1063){
 						$('body, html').stop().animate({ scrollTop: $('.mark-'+sub_index).offset().top-topminus },300);
 					}else{
