@@ -19,10 +19,13 @@ $(function(){
 	var $name_footer = $('.footer');
 	var footer_contaner=document.querySelector('footer .body-footer-contaner');
 	var split_url = this.location.href.split('/').reverse()[0];
+	var split_url_load = this.location.href.split('#').reverse()[0];
 	//-----------------------------------
 	//-----시작시 바로 동적 요소 제어------
 	$(document).ready(function(){
 		var down_speed = 500;
+		var load_top = 249;
+		
 		function nav_down(){
 			nav_timeout = setTimeout(function(){
 				$('.nav').css({'margin-top':'0'});
@@ -39,6 +42,10 @@ $(function(){
 		// $('.mobile-menu').css({'right':pc_ham+'px'});
 		// $('.gnb-wrap, .gnb-modile').find('.gnb-1').children('a').addClass('on');
 		nav_down();
+		console.log(split_url_load);
+		// if(this.location.href!==fixability_url){
+		// 	$('body, html').stop().animate({ scrollTop: $('#'+split_url_load).offset().top-load_top},300);
+		// }
 	});
 	//----------------------------------
 	//-----브라우저 가로폭 변동시 필요 요소 동작-----
