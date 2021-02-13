@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://fixability.co.kr">
+
+   <url>
+
+      <loc>http://fixability.co.kr/index.html</loc>
+
+      <lastmod>2021-02-13</lastmod>
+
+      <changefreq>always</changefreq>
+
+      <priority>1.0</priority>
+
+   </url>
+   <url>
+
+      <loc>http://fixability.co.kr/consulting.html</loc>
+
+      <lastmod>2021-02-13</lastmod>
+
+      <changefreq>always</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+   <url>
+
+      <loc>http://fixability.co.kr/qna.html</loc>
+
+      <lastmod>2021-02-13</lastmod>
+
+      <changefreq>always</changefreq>
+
+      <priority>0.7</priority>
+
+   </url>
+
+</urlset>
