@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Fixability - 부동산 계약 통합 플랫폼</title>
+        <link>http://fixability.co.kr/index.html</link>
+        <description>안녕하세요. Fixability 입니다.</description>
+        <pubDate>mon, 15 Nov 2021 16:35:12 GMT</pubDate>
+        <item>
+            <title>픽스업빌리티</title>
+            <link>http://fixability.co.kr/index.html</link>
+            <guid>http://fixability.co.kr/index.html</guid>
+            <pubDate>mon, 15 Nov 2021 16:35:12 GMT</pubDate>
+            <description>비대면 부동산 전자계약 통합 플렛폼 서비스.</description>
+        </item>
+    </channel>
+</rss>
