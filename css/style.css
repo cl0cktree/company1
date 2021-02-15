@@ -336,7 +336,7 @@ textarea{box-sizing:border-box;}
 
 .section .article .contents .graph_title{min-width:320px;width:100%;margin:180px auto 0;padding-bottom:25px;transition:all 0.3s;}
 .section .article .contents .graph_title>div{text-align:left;color:#7f7f7f;}
-.section .article .contents .graph_title .then-start{padding-left:0;font-size:63px;text-align:center;}
+.section .article .contents .graph_title .then-start{padding-left:0!important;font-size:63px;text-align:center;}
 .section .article .contents .graph_title>div span{color:#2aa4e1;}
 .section .article .contents .graph_title>div:nth-of-type(2){height:20px;line-height:20px;font-size:17px;font-weight:500;margin-top:10px;}
 
