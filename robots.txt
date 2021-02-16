@@ -5,3 +5,4 @@ Disallow: /sub/
 Disallow: /data/
 Disallow: /form-mail/
 Disallow: /onefix-alpha/
+Sitemap: http://fixability.co.kr/sitemap.xml
