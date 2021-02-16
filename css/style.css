@@ -639,8 +639,8 @@ textarea{box-sizing:border-box;}
 	.section .article .contents .graph .graph-img .img-wrap .step-box-wrap-mobile{display:block;width:100%;}
 	.section .article .contents .graph .graph-img .img-wrap .step-box-wrap-mobile .step-box .step-wrap .step-title{min-width:115px;margin-left:100px;font-size:15px;font-weight:700;}
 	.section .article .contents .graph .graph-img .img-wrap .step-box-wrap-mobile .step-box .step-wrap .step-word{font-size:12px;}
-	.section .article .contents .kind-wrap-3 .card-wrap .card-six-kind{margin-bottom:30px;}
-	.section .article .contents .kind-wrap-3 .card-wrap .card-six-kind .six-kind-title{font-size:22px;font-weight:600;}
+	.section .article .contents .kind-wrap-3 .card-wrap .card-six-kind{margin-bottom:50px;}
+	.section .article .contents .kind-wrap-3 .card-wrap .card-six-kind .six-kind-title{font-size:18px;font-weight:600;}
 	.section .article .contents .kind-wrap-3 .card-wrap .card-six-kind .six-kind-card{display:none;}
 	.section .article .contents .kind-wrap-3 .card-wrap .card-six-kind .kind-card-mobile{display:block;}
 	.section .article .contents .intro-wrap{margin:20px auto 0;}
@@ -705,7 +705,7 @@ textarea{box-sizing:border-box;}
 	.section .article .contents .graph .graph-img .img-wrap .step-box-wrap-mobile .step-box .step-wrap .step-title{min-width:115px;margin-left:100px;font-size:15px;font-weight:700;}
 	.section .article .contents .graph .graph-img .img-wrap .step-box-wrap-mobile .step-box .step-wrap .step-word{font-size:12px;}
 	.section .article .contents .kind-wrap-3 .card-wrap .card-six-kind{margin-bottom:50px;}
-	.section .article .contents .kind-wrap-3 .card-wrap .card-six-kind .six-kind-title{font-size:22px;font-weight:600;}
+	.section .article .contents .kind-wrap-3 .card-wrap .card-six-kind .six-kind-title{font-size:18px;font-weight:600;}
 	.section .article .contents .kind-wrap-3 .card-wrap .card-six-kind .six-kind-card{display:none;}
 	.section .article .contents .kind-wrap-3 .card-wrap .card-six-kind .kind-card-mobile{display:block;}
 	.section .article .contents .intro-wrap{margin:20px auto 0;}
