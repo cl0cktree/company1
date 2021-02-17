@@ -75,6 +75,7 @@ textarea{box-sizing:border-box;}
 .background_green{background:#3fcc60!important;}
 .background_purple{background:#949ce4!important;}
 
+.max-art{background:transparent!important;}
 .clear_both{clear:both;}
 
 #layout #wrap #header .header{display:none!important;}
