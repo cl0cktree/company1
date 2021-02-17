@@ -246,7 +246,7 @@ $(function(){
 	//-----top_btn 클릭시 동작-----------
 	$('.top_btn').on('click',function(){
 		$('body, html').stop().animate({ scrollTop: $('body').offset().top-100},400,function(){
-			history.pushState(null,null,fixability_url+'/');
+			history.pushState(null,null,fixability_url);
 		});
 	});
 	//----------------------------------
