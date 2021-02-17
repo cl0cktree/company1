@@ -92,8 +92,8 @@ $(function(){
 					// };
 					// $('.mobile-menu').css({'right':pc_ham+'px'});
 				};
-			},resize_framespeed)
-		}
+			},resize_framespeed);
+		};
 	});
 	//--------------------------------
 	//-----topmenu 및 top_btn scroll--
@@ -235,7 +235,7 @@ $(function(){
 						$('.nav').stop().css({'height':'70px','line-height':'70px'},200);
 					};
 					$('.top_btn').removeClass('on');
-					history.pushState(null,null,fixability_url);
+					// history.pushState(null,null,fixability_url);
 				};
 				// history.pushState(null,null,fixability_url);
 				return false;
