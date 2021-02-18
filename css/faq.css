@@ -94,13 +94,37 @@
 
 .section .article .faq>h3{min-width:320px;width:100%;max-width:1080px;margin:0 auto;}
 .section .article .faq>h3 span{padding:0;}
-.section .article .contents .greeting{max-width:1080px;margin:0 auto;overflow:hidden;}
-.section .article .contents .greeting .board_word{width:100%;padding-left:10px;color:#7f7f7f;font-size:20px;}
+.section .article .contents .greeting{max-width:1080px;height:100%;margin:0 auto;overflow:hidden;}
+.section .article .contents .greeting .board_word{width:100%;color:#7f7f7f;}
 .section .article .contents .greeting .board_word span{color:#28d47c;}
-.section .article .contents .greeting .qna-board{width:100%;max-width:1080px;min-height:200px;background:#f7f7f7;margin:37px auto 160px;overflow:hidden;opacity:1;}
-.section .article .contents .greeting .qna-board .qbox-wrap{display:table;box-sizing:border-box;width:40%;background:#f5f5f5;padding:30px;float:left;}
-.section .article .contents .greeting .qna-board .qbox-wrap li{display:table-cell;width:100%;min-height:50px;vertical-align:top;}
 
+.section .article .contents .greeting .qna-board{max-width:1080px;min-height:632px;background:#f7f7f7;margin:60px auto 160px;word-break:keep-all;opacity:1;}
+.section .article .contents .greeting .qna-board:after{display:block;content:'';width:100%;height:0;clear:both;}
+.section .article .contents .greeting .qna-board .qbox-wrap{display:block;position:absolute;box-sizing:border-box;width:39%;height:100%;background:#f5f5f5;padding:30px;left:0;}
+.section .article .contents .greeting .qna-board .qbox-wrap li{display:table;box-sizing:border-box;width:100%;min-height:50px;transition:all 0.2s;}
+.section .article .contents .greeting .qna-board .qbox-wrap li a{display:table-cell;box-sizing:border-box;width:100%;min-height:50px;text-decoration:none;color:#c1c1c1;font-size:20px;vertical-align:top;transition:all 0.2s;}
+.section .article .contents .greeting .qna-board .qbox-wrap li.on a{color:#7f7f7f;}
+.section .article .contents .greeting .qna-board .abox-wrap{display:block;position:absolute;box-sizing:border-box;width:61%;height:100%;background:#d9d9d9;right:0;}
+.section .article .contents .greeting .qna-board .abox-wrap>li{display:none;position:relative;box-sizing:border-box;width:100%;height:100%;transition:all 0.2s;}
+.section .article .contents .greeting .qna-board .abox-wrap>li.on{display:block;}
+.section .article .contents .greeting .qna-board .abox-wrap .alist_6{display:block;width:100%;padding-top:282px;color:#ffffff;font-size:30px;text-align:center;}
+.section .article .contents .greeting .qna-board .abox-wrap>li ul{display:block;box-sizing:border-box;width:100%;height:100%;padding:30px;}
+.section .article .contents .greeting .qna-board .abox-wrap>li ul li{display:block;position:relative;box-sizing:border-box;color:#7f7f7f;}
+.section .article .contents .greeting .qna-board .abox-wrap>li ul .faq_title{min-height:45px;line-height:45px;border-bottom:2px solid #28d47c;padding:0px 5px;font-size:30px;font-weight:600;}
+.section .article .contents .greeting .qna-board .abox-wrap>li ul .faq_word{padding:47px 54px 0 26px;font-size:15px;}
+
+.section .article .contents .greeting .qna-board-mobile{max-width:1080px;background:#f7f7f7;margin:60px auto 160px;word-break:keep-all;opacity:1;}
+.section .article .contents .greeting .qna-board-mobile:after{display:block;content:'';width:100%;height:0;clear:both;}
+.section .article .contents .greeting .qna-board-mobile .qbox-wrap{display:block;box-sizing:border-box;width:100%;height:100%;background:#f5f5f5;padding:20px 10px;left:0;}
+.section .article .contents .greeting .qna-board-mobile .qbox-wrap li{display:block;box-sizing:border-box;width:100%;min-height:20px;transition:all 0.2s;}
+.section .article .contents .greeting .qna-board-mobile .qbox-wrap li a{display:block;box-sizing:border-box;width:100%;min-height:20px;padding-top:6px;text-decoration:none;color:#c1c1c1;font-size:12px;transition:all 0.3s;}
+.section .article .contents .greeting .qna-board-mobile .qbox-wrap li.on a{color:#7f7f7f;}
+.section .article .contents .greeting .qna-board-mobile .qbox-wrap .abox{display:block;box-sizing:border-box;min-width:260px;width:100%;height:0;background:#d9d9d9;color:#7f7f7f;margin-top:10px;overflow:hidden;transition:all 0.2s;}
+.section .article .contents .greeting .qna-board-mobile .qbox-wrap .abox.on{min-height:235px;padding:15px 20px;}
+.section .article .contents .greeting .qna-board-mobile .qbox-wrap .abox>li{display:none;position:relative;box-sizing:border-box;width:100%;height:100%;transition:all 0.2s;}
+.section .article .contents .greeting .qna-board-mobile .qbox-wrap .abox.on>li{display:block;}
+.section .article .contents .greeting .qna-board-mobile .qbox-wrap .abox .faq_title{min-height:30px;line-height:30px;border-bottom:2px solid #28d47c;padding:0px 5px;font-size:15px;font-weight:600;}
+.section .article .contents .greeting .qna-board-mobile .qbox-wrap .abox .faq_word{padding:20px 0;font-size:10px;}
 /*--------------------------------------------------------------*/
 
 @media all and (max-width:320px){
@@ -108,46 +132,86 @@
     .header-con .nav .top-logo-mobile{display:table-cell;left:calc(50% - 26.5px);float:none;}
 	.header-con .nav .gnb-wrap{display:none;}
 	.header-con .menu_btn{display:block;}
+	.faq{padding:90px 0 0!important;}
+	.section .article .contents>h3{padding:0 20px;font-size:28px;font-weight:700;}
+	.section .article .contents .greeting .board_word{padding-left:20px;font-size:12px;}
+	.section .article .contents .greeting .qna-board{display:none;}
+	.section .article .contents .greeting .qna-board-mobile{display:block;width:87.5%;}
 }
 @media all and (min-width:321px) and (max-width:480px){
 	.header-con .nav .top-logo{display:none;width:150px;left:calc(50% - 75px);float:none;}
     .header-con .nav .top-logo-mobile{display:table-cell;left:calc(50% - 26.5px);float:none;}
 	.header-con .nav .gnb-wrap{display:none;}
 	.header-con .menu_btn{display:block;}
+	.faq{padding:90px 0 0!important;}
+	.section .article .contents>h3{padding:0 20px;font-size:28px;font-weight:700;}
+	.section .article .contents .greeting .board_word{padding-left:20px;font-size:12px;}
+	.section .article .contents .greeting .qna-board{display:none;}
+	.section .article .contents .greeting .qna-board-mobile{display:block;width:87.5%;}
 }
 @media all and (min-width:481px) and (max-width:640px){
 	.header-con .nav .top-logo{display:none;width:150px;left:calc(50% - 75px);float:none;}
     .header-con .nav .top-logo-mobile{display:table-cell;left:calc(50% - 26.5px);float:none;}
 	.header-con .nav .gnb-wrap{display:none;}
 	.header-con .menu_btn{display:block;}
+	.faq{padding:90px 0 0!important;}
+	.section .article .contents>h3{padding:0 20px;font-size:35px;font-weight:700;}
+	.section .article .contents .greeting .board_word{padding-left:20px;font-size:20px;}
+	.section .article .contents .greeting .qna-board{display:none;}
+	.section .article .contents .greeting .qna-board-mobile{display:block;width:87.5%;}
 }
 @media all and (min-width:641px) and (max-width:720px){
 	.header-con .nav .top-logo{display:none;width:150px;left:calc(50% - 75px);float:none;}
     .header-con .nav .top-logo-mobile{display:table-cell;left:calc(50% - 26.5px);float:none;}
 	.header-con .nav .gnb-wrap{display:none;}
 	.header-con .menu_btn{display:block;}
+	.faq{padding:90px 0 0!important;}
+	.section .article .contents>h3{padding:0 20px;font-size:35px;font-weight:700;}
+	.section .article .contents .greeting .board_word{padding-left:20px;font-size:20px;}
+	.section .article .contents .greeting .qna-board{display:none;}
+	.section .article .contents .greeting .qna-board-mobile{display:block;width:87.5%;}
 }
 @media all and (min-width:721px) and (max-width:1080px){
 	.header-con .nav .top-logo{display:none;width:150px;left:calc(50% - 75px);float:none;}
     .header-con .nav .top-logo-mobile{display:table-cell;left:calc(50% - 26.5px);float:none;}
 	.header-con .nav .gnb-wrap{display:none;}
 	.header-con .menu_btn{display:block;}
+	.faq{padding:180px 0 0!important;}
+	.section .article .contents>h3{padding:0 20px;font-size:35px;font-weight:700;}
+	.section .article .contents .greeting .board_word{padding-left:20px;font-size:20px;}
+	.section .article .contents .greeting .qna-board{display:block;width:95%;}
+	.section .article .contents .greeting .qna-board-mobile{display:none;width:100%;}
 }
 @media all and (min-width:1081px) and (max-width:1280px){
 	.header-con .nav .top-logo{display:table-cell;width:150px;left:15px;float:none;}
     .header-con .nav .top-logo-mobile{display:none;left:15px;float:none;}
 	.header-con .nav .gnb-wrap{display:block;} .header-con .nav .gnb-wrap>li{font-size:16px;}
 	.header-con .menu_btn{display:block;}
+	.faq{padding:180px 0 0!important;}
+	.section .article .contents>h3{font-size:35px;font-weight:700;}
+	.section .article .contents .greeting .board_word{padding-left:10px;font-size:20px;}
+	.section .article .contents .greeting .qna-board{display:block;width:95%;}
+	.section .article .contents .greeting .qna-board-mobile{display:none;width:100%;}
 }
 @media all and (min-width:1281px) and (max-width:1500px){
 	.header-con .nav .top-logo{display:table-cell;width:150px;left:15px;float:none;}
     .header-con .nav .top-logo-mobile{display:none;left:15px;float:none;}
 	.header-con .nav .gnb-wrap{display:block;} .header-con .nav .gnb-wrap>li{font-size:16px;}
 	.header-con .menu_btn{display:block;}
+	.faq{padding:180px 0 0!important;}
+	.section .article .contents>h3{font-size:35px;font-weight:700;}
+	.section .article .contents .greeting .board_word{padding-left:10px;font-size:20px;}
+	.section .article .contents .greeting .qna-board{display:block;width:100%;}
+	.section .article .contents .greeting .qna-board-mobile{display:none;width:100%;}
 }
 @media all and (min-width:1501px){
 	.header-con .nav .top-logo{display:table-cell;width:150px;left:15px;float:none;}
     .header-con .nav .top-logo-mobile{display:none;left:15px;float:none;}
 	.header-con .nav .gnb-wrap{display:block;} .header-con .nav .gnb-wrap>li{font-size:16px;}
 	.header-con .menu_btn{display:block;}
+	.faq{padding:180px 0 0!important;}
+	.section .article .contents>h3{font-size:35px;font-weight:700;}
+	.section .article .contents .greeting .board_word{padding-left:10px;font-size:20px;}
+	.section .article .contents .greeting .qna-board{display:block;width:100%;}
+	.section .article .contents .greeting .qna-board-mobile{display:none;width:100%;}
 }

@@ -1,7 +1,8 @@
 $(function(){
 	//-----지역 변수의 전역화 정의-------
 	var fixability_url = 'http://fixability.co.kr';
-	var consulting_url = "./consulting.html"
+	var consulting_url = "consulting.html"
+	var faq_url = "faq.html"
 	var resize_framespeed = 1000/60;
 	var nav_num;
 	var nav_num_start;
@@ -108,7 +109,7 @@ $(function(){
 		if(!scroll_delay_time_1){
 			scroll_delay_time_1 = setTimeout(function(){
 				scroll_delay_time_1=null;
-				if ($(window).scrollTop()>$('.article_0').height()-100){
+				if (($(window).scrollTop()>$('.article_0').height()-100)||($(window).scrollTop()>$('.max-art').height()-$('.max-art').height())){
 					// $('.header').css({'background':'rgba(255,255,255,0.7)'});
 					// $('.gnb-wrap').stop().css({'height':'100px','line-height':'100px'},200);
 					// $('.language').stop().css({'top':'30px'},220);
@@ -246,7 +247,7 @@ $(function(){
 	//-----top_btn 클릭시 동작-----------
 	$('.top_btn').on('click',function(){
 		$('body, html').stop().animate({ scrollTop: $('body').offset().top-100},400,function(){
-			history.pushState(null,null,fixability_url);
+			// history.pushState(null,null,fixability_url);
 		});
 	});
 	//----------------------------------
@@ -374,9 +375,9 @@ $(function(){
 					url_add = 'introduce'
 				}
 				$(this).siblings('.depth_wrap').children('li:eq(0)').children('a').addClass(color_add);
-				history.pushState(null,null,fixability_url+'/#mark_'+gnb_index+'_1');
+				// history.pushState(null,null,fixability_url+'/#mark_'+gnb_index+'_1');
 				$('body, html').stop().animate({ scrollTop: $('.article_'+art_index).find('.contents').find('.slogan-box').offset().top-topminus },300);
-				history.pushState(null,null,fixability_url);
+				// history.pushState(null,null,fixability_url);
 			}else{
 				var sub_index= $(this).parent('li').data('index');
 				var split_sub = sub_index.split('_');
@@ -400,13 +401,13 @@ $(function(){
 				}
 				function menu_color(){
 					$(this).addClass(color_add);
-					history.pushState(null,null,fixability_url+'/#mark_'+sub_index);
+					// history.pushState(null,null,fixability_url+'/#mark_'+sub_index);
 					if($('.header, .header-con').width()>1063){
 						$('body, html').stop().animate({ scrollTop: $('.mark-'+sub_index).offset().top-topminus },300);
 					}else{
 						$('body, html').stop().animate({ scrollTop: $('.mark-'+sub_index).offset().top-top_mobile },300);
 					};
-					history.pushState(null,null,fixability_url);
+					// history.pushState(null,null,fixability_url);
 				};
 			}
 		}
@@ -449,6 +450,16 @@ $(function(){
 		}else{
 			alert('모바일에서만 가능합니다.');
 		}
+	});
+	$('.qbox-wrap').on('click','a',function(){
+		var q_index=$(this).parent('li').data('list');
+		$('.qbox-wrap').find('li').removeClass('on');
+		$('.qlist_'+q_index).addClass('on');
+		$('.abox-wrap').children('li').removeClass('on');
+		$('.abox-wrap').find('.alist_'+q_index).addClass('on');
+		$('.abox').removeClass('on');
+		$('.qlist_'+q_index).find('.abox').addClass('on');
+		console.log(q_index);
 	});
 	//----------------------------------
 
