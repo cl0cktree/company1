@@ -428,10 +428,16 @@ $(function(){
 					color_add = 'color_navy';
 					url_add = 'introduce'
 					menu_color();
-				}else{
-					// alert('준비 중 입니다.');
-					// $('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
-					// $('.depth_wrap').children('li').children('a').removeClass();
+				}else if(split_sub[0]=='4'){
+					window.location.href = './consulting.html';
+					// color_add = 'color_consulting';
+					// $('.gnb-4').children('a').addClass('on');
+					// $('.gnb-4').find('.depth_wrap').children('li:eq(0)').children('a').addClass(color_add);
+				}else if(split_sub[0]=='5'){
+					window.location.href = './faq.html';
+					// color_add = 'color_faq';
+					// $('.gnb-5').children('a').addClass('on');
+					// $('.gnb-5').find('.depth_wrap').children('li:eq(0)').children('a').addClass(color_add);
 				}
 				function menu_color(){
 					$(this).addClass(color_add);
