@@ -49,7 +49,7 @@ $(function(){
 			// console.log(split_url_load_re);
 			if (this.location.href.split('#')[1]){
 				console.log(this.location.href+' / '+split_url_load_re);
-				$('body, html').stop().animate({ scrollTop: $('#'+split_url_load_re).offset().top-load_top},0);
+				// $('body, html').stop().animate({ scrollTop: $('#'+split_url_load_re).offset().top-load_top},0);
 			}
 		}
 		// else if (split_url_load==fixability_url+'/consulting.html'){
@@ -359,12 +359,31 @@ $(function(){
 		// $('.depth_wrap').children('li').children('a').removeClass();
 		$('.gnb-wrap, .gnb-modile').find('.gnb-'+gnb_index).children('a').addClass('on');
 		if (gnb_index=='4'){
-			window.location.href = './consulting.html'
+			window.location.href = './consulting.html';
 		}
 		else if(gnb_index=='5'){
-			window.location.href = './faq.html'
+			window.location.href = './faq.html';
 		}else{
-			if (String(gnb_index).length==1){
+			console.log(split_url);
+			if (((String(gnb_index).length==1)&&(split_url=='consulting.html'))||((String(gnb_index).length==1)&&split_url=='faq.html')){
+				if (gnb_index=='1'){
+					color_add = 'color_blue';
+					url_add = 'direction'
+				}else if(gnb_index=='2'){
+					color_add = 'color_green';
+					url_add = 'kind'
+				}else if(gnb_index=='3'){
+					color_add = 'color_navy';
+					url_add = 'introduce'
+				}else if(gnb_index=='4'){
+					color_add = 'color_navy';
+					url_add = 'introduce'
+				}
+				$(this).siblings('.depth_wrap').children('li:eq(0)').children('a').addClass(color_add);
+				// history.pushState(null,null,fixability_url+'/#mark_'+gnb_index+'_1');
+				// history.pushState(null,null,fixability_url);
+			}
+			else if(String(gnb_index).length==1){
 				if (gnb_index=='1'){
 					color_add = 'color_blue';
 					url_add = 'direction'
@@ -378,7 +397,6 @@ $(function(){
 				$(this).siblings('.depth_wrap').children('li:eq(0)').children('a').addClass(color_add);
 				// history.pushState(null,null,fixability_url+'/#mark_'+gnb_index+'_1');
 				$('body, html').stop().animate({ scrollTop: $('.article_'+art_index).find('.contents').find('.slogan-box').offset().top-topminus },300);
-				// history.pushState(null,null,fixability_url);
 			}else{
 				var sub_index= $(this).parent('li').data('index');
 				var split_sub = sub_index.split('_');
@@ -464,7 +482,7 @@ $(function(){
 	});
 	//----------------------------------
 	$('.kakao_consulting, .kakao_consulting_mobile').on('click',function(){
-		window.location.href = 'https://pf.kakao.com/_gIxbUK'
+		window.location.href = 'https://pf.kakao.com/_gIxbUK';
 	});
 	return false;
 });
