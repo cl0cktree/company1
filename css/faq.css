@@ -52,21 +52,12 @@
 .header-con .gnb-modile>li{display:block;position:relative;box-sizing:border-box;width:100%;margin-top:25px;}
 .header-con .gnb-modile>li:after{display:block;content:'';width:100%;height:0;clear:both;}
 .header-con .gnb-modile>li a{position:absolute;display:block;width:fit-content;height:30px;line-height:30px;margin-right:30px;top:0;right:0;font-size:26px;font-weight:700;text-decoration:none;float:none;;color:#959595;text-align:right;}
-/* .header-con .gnb-modile>li a:hover:before{width:100%;height:3px;left:0%;transition:all 0.3s;z-index:1;}
-.header-con .gnb-modile .gnb-1 a:hover:before{background:#30a7e2;left:0%;}
-.header-con .gnb-modile .gnb-2 a:hover:before{background:#3fcc60;left:0%;}
-.header-con .gnb-modile .gnb-3 a:hover:before{background:#949ce4;left:0%;} */
 
-/* .header-con .gnb-modile>li a:before,.gnb-modile li a:after{content:'';display:block;position:absolute;width:0;bottom:0;left:50%;transition:all 0.5s;} */
 .header-con .gnb-modile>li a.on{color:#7f7f7f;}
-/* .header-con .gnb-modile>li a.on:after{width:100%;height:3px;left:0%;transition:all 0.1s;}
-.header-con .gnb-modile .gnb-1 a.on:after{background:#30a7e2;left:0%;transition:all 0.1s;}
-.header-con .gnb-modile .gnb-2 a.on:after{background:#3fcc60;left:0%;transition:all 0.1s;}
-.header-con .gnb-modile .gnb-3 a.on:after{background:#949ce4;left:0%;transition:all 0.1s;} */
 
 .header-con .gnb-modile>li .depth_wrap{display:block;box-sizing:border-box;width:100%;padding-top:0px;margin-top:35px;float:right;opacity:1;}
 .header-con .gnb-modile>li .depth_wrap>li{position:relative;font-size:15px;height:22px;line-height:22px;}
-.header-con .gnb-modile>li .depth_wrap>li a{height:22px;line-height:22px;font-size:21px;font-weight:600;margin-right:30px;color:#969595;text-align:right;}
+.header-con .gnb-modile>li .depth_wrap>li a{height:22px;line-height:22px;font-size:15px;font-weight:600;margin-right:30px;color:#969595;text-align:right;}
 
 .header-con .language-mobile{display:none;position:absolute;width:80px;height:40px;line-height:40px;margin-top:50px;right:30px;background:#919191;color:#fff;font-weight:500;border-radius:5px;overflow:hidden;transition:all 0.3s;}
 .header-con .language-mobile.on{overflow:visible;height:160px;}

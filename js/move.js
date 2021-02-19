@@ -24,16 +24,30 @@ $(function(){
 	var split_url_load_re = this.location.href.split('#').reverse()[0];
 	//-----------------------------------
 	//-----시작시 바로 동적 요소 제어------
-	$(document).ready(function(){
+	
+	$(document).ready(function(event){
+		// event.preventDefault();
+		// event.stopPropagation();
 		var down_speed = 500;
 		var load_top = 129;
 		
+		if((split_url_load==fixability_url)||(split_url_load==fixability_url+'/')){
+			// console.log(split_url_load_re);
+			
+			var load_top = 129;
+			if (this.location.href.split('#')[1]){
+				console.log(this.location.href+' / '+split_url_load_re);
+				$('body, html').stop().animate({ scrollTop: $('#'+split_url_load_re).offset().top-load_top},0);
+				// window.location.href = this.location.href;
+			}
+		}
+
 		function nav_down(){
 			nav_timeout = setTimeout(function(){
 				$('.nav').css({'margin-top':'0'});
 			},down_speed);
 		};
-		$('body, html').stop().animate({ scrollTop: $('body').offset().top-100},0);
+		// $('body, html').stop().animate({ scrollTop: $('body').offset().top-100},0);
 		// $('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
 		
 		if($('.nav').width()==$(window).width()){
@@ -49,7 +63,8 @@ $(function(){
 			// console.log(split_url_load_re);
 			if (this.location.href.split('#')[1]){
 				console.log(this.location.href+' / '+split_url_load_re);
-				// $('body, html').stop().animate({ scrollTop: $('#'+split_url_load_re).offset().top-load_top},0);
+				$('body, html').stop().animate({ scrollTop: $('#'+split_url_load_re).offset().top-load_top},0);
+				// window.location.href = this.location.href;
 			}
 		}
 		// else if (split_url_load==fixability_url+'/consulting.html'){
@@ -65,7 +80,7 @@ $(function(){
 		if(!delay_time){
 			delay_time = setTimeout(function() {
 				delay_time=null;
-				if($('.header').width()>1063){
+				if(($('.header').width()>1063)||($('.header-con').width()>1063)){
 					// $('.language, .language-mobile').stop().removeClass('on');
 					$('.menu_btn').stop().removeClass('mobile');
 					$('.menu_btn input[type=checkbox]').prop('checked',false);
