@@ -462,6 +462,8 @@ $(function(){
 		console.log(q_index);
 	});
 	//----------------------------------
-
+	$('.kakao_consulting, .kakao_consulting_mobile').on('click',function(){
+		window.location.href = 'https://pf.kakao.com/_gIxbUK'
+	});
 	return false;
 });
