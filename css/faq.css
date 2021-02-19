@@ -198,7 +198,7 @@
 @media all and (min-width:1501px){
 	.header-con .nav .top-logo{display:table-cell;width:150px;left:15px;float:none;}
     .header-con .nav .top-logo-mobile{display:none;left:15px;float:none;}
-	.header-con .nav .gnb-wrap{display:block;} .header-con .nav .gnb-wrap>li{font-size:16px;}
+	.header-con .nav .gnb-wrap{display:block;} .header-con .nav .gnb-wrap>li{font-size:18px;}
 	.header-con .menu_btn{display:block;}
 	.faq{padding:180px 0 0!important;}
 	.section .article .contents>h3{font-size:35px;font-weight:700;}
