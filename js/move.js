@@ -34,7 +34,7 @@ $(function(){
 			},down_speed);
 		};
 		$('body, html').stop().animate({ scrollTop: $('body').offset().top-100},0);
-		$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
+		// $('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
 		
 		if($('.nav').width()==$(window).width()){
 			pc_ham = 20;
@@ -358,10 +358,11 @@ $(function(){
 		// $('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
 		// $('.depth_wrap').children('li').children('a').removeClass();
 		$('.gnb-wrap, .gnb-modile').find('.gnb-'+gnb_index).children('a').addClass('on');
-		if ((gnb_index=='4')||(gnb_index=='5')){
-			alert('준비 중 입니다.');
-			$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
-			$('.depth_wrap').children('li').children('a').removeClass();
+		if (gnb_index=='4'){
+			window.location.href = './consulting.html'
+		}
+		else if(gnb_index=='5'){
+			window.location.href = './faq.html'
 		}else{
 			if (String(gnb_index).length==1){
 				if (gnb_index=='1'){
@@ -395,9 +396,9 @@ $(function(){
 					url_add = 'introduce'
 					menu_color();
 				}else{
-					alert('준비 중 입니다.');
-					$('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
-					$('.depth_wrap').children('li').children('a').removeClass();
+					// alert('준비 중 입니다.');
+					// $('.gnb-wrap, .gnb-modile').find('a').removeClass('on');
+					// $('.depth_wrap').children('li').children('a').removeClass();
 				}
 				function menu_color(){
 					$(this).addClass(color_add);
