@@ -62,7 +62,7 @@ $(function(){
 		if((split_url_load==fixability_url)||(split_url_load==fixability_url+'/')){
 			// console.log(split_url_load_re);
 			if (this.location.href.split('#')[1]){
-				console.log(this.location.href+' / '+split_url_load_re);
+				// console.log(this.location.href+' / '+split_url_load_re);
 				$('body, html').stop().animate({ scrollTop: $('#'+split_url_load_re).offset().top-load_top},0);
 			}
 		}
