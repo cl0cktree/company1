@@ -94,11 +94,13 @@
 
 .section .article .consulting>h3{min-width:320px;width:100%;max-width:1080px;margin:0 auto;}
 .section .article .consulting>h3 span{padding:0;}
-.section .article .contents .with{max-width:1080px;margin:0 auto;overflow:hidden;}
-.section .article .contents .with .board_word{width:100%;padding-left:10px;color:#7f7f7f;font-size:20px;}
+.section .article .contents .with{max-width:1080px;min-height:46px;margin:0 auto;overflow:hidden;}
+.section .article .contents .with .board_word{width:100%;min-height:46px;color:#7f7f7f;}
 .section .article .contents .with .board_word span{color:#3869f6;}
+.section .article .contents .with .kakao_consulting{position:absolute;height:46px;line-height:46px;background:#3869f6;border:0;border-radius:10px;bottom:0;color:#fff;font-size:15px;cursor:pointer;transition:all 0.2s;}
+.section .article .contents .with .kakao_consulting_mobile{position:absolute;width:238px;height:46px;line-height:46px;background:#3869f6;border:0;border-radius:10px;margin-left:-119px;bottom:60px;left:50%;color:#fff;font-size:15px;cursor:pointer;transition:all 0.2s;}
 .section .article .contents .with .board_ceo{max-width:1080px;min-height:200px;background:#f7f7f7;margin:37px auto 160px;overflow:hidden;opacity:1;}
-.section .article .contents .with .board_ceo iframe{display:block;box-sizing:border-box;width:90%;max-width:880px;min-height:540px;border:0;margin:35px auto 0;overflow:hidden;}
+.section .article .contents .with .board_ceo iframe{display:block;box-sizing:border-box;width:90%;max-width:880px;min-height:560px;border:0;margin:35px auto 0;overflow:hidden;}
 /*--------------------------------------------------------------*/
 
 @media all and (max-width:320px){
@@ -106,50 +108,102 @@
     .header-con .nav .top-logo-mobile{display:table-cell;left:calc(50% - 26.5px);float:none;}
 	.header-con .nav .gnb-wrap{display:none;}
 	.header-con .menu_btn{display:block;}
+	.consulting{padding:110px 0 0!important;}
+	.section .article .contents>h3{height:35px;line-height:35px;padding:0 20px;font-size:28px;font-weight:700;}
+	.section .article .contents>h3 span{height:35px;line-height:35px;}
+	.section .article .contents .with .board_word{padding-left:20px;font-size:12px;}
+	.section .article .contents .with .board_ceo{width:calc(100% - 40px);}
+	.section .article .contents .with .kakao_consulting{display:none;}
+	.section .article .contents .with .kakao_consulting_mobile{display:block;}
 }
 @media all and (min-width:321px) and (max-width:480px){
 	.header-con .nav .top-logo{display:none;width:150px;left:calc(50% - 75px);float:none;}
     .header-con .nav .top-logo-mobile{display:table-cell;left:calc(50% - 26.5px);float:none;}
 	.header-con .nav .gnb-wrap{display:none;}
 	.header-con .menu_btn{display:block;}
+	.consulting{padding:110px 0 0!important;}
+	.section .article .contents>h3{height:35px;line-height:35px;padding:0 20px;font-size:28px;font-weight:700;}
+	.section .article .contents>h3 span{height:35px;line-height:35px;}
+	.section .article .contents .with .board_word{padding-left:20px;font-size:12px;}
+	.section .article .contents .with .board_ceo{width:calc(100% - 40px);}
+	.section .article .contents .with .kakao_consulting{display:none;}
+	.section .article .contents .with .kakao_consulting_mobile{display:block;}
 }
 @media all and (min-width:481px) and (max-width:640px){
 	.header-con .nav .top-logo{display:none;width:150px;left:calc(50% - 75px);float:none;}
     .header-con .nav .top-logo-mobile{display:table-cell;left:calc(50% - 26.5px);float:none;}
 	.header-con .nav .gnb-wrap{display:none;}
 	.header-con .menu_btn{display:block;}
+	.consulting{padding:110px 0 0!important;}
+	.section .article .contents>h3{height:35px;line-height:35px;padding:0 20px;font-size:35px;font-weight:700;}
+	.section .article .contents>h3 span{height:35px;line-height:35px;}
+	.section .article .contents .with .board_word{padding-left:20px;font-size:17px;}
+	.section .article .contents .with .board_ceo{width:calc(100% - 40px);}
+	.section .article .contents .with .kakao_consulting{display:none;}
+	.section .article .contents .with .kakao_consulting_mobile{display:block;}
 }
 @media all and (min-width:641px) and (max-width:720px){
 	.header-con .nav .top-logo{display:none;width:150px;left:calc(50% - 75px);float:none;}
     .header-con .nav .top-logo-mobile{display:table-cell;left:calc(50% - 26.5px);float:none;}
 	.header-con .nav .gnb-wrap{display:none;}
 	.header-con .menu_btn{display:block;}
+	.consulting{padding:110px 0 0!important;}
+	.section .article .contents>h3{height:35px;line-height:35px;padding:0 20px;font-size:35px;font-weight:700;}
+	.section .article .contents>h3 span{height:35px;line-height:35px;}
+	.section .article .contents .with .board_word{padding-left:20px;font-size:17px;}
+	.section .article .contents .with .board_ceo{width:calc(100% - 40px);}
+	.section .article .contents .with .kakao_consulting{display:none;}
+	.section .article .contents .with .kakao_consulting_mobile{display:block;}
 }
 @media all and (min-width:721px) and (max-width:1080px){
 	.header-con .nav .top-logo{display:none;width:150px;left:calc(50% - 75px);float:none;}
     .header-con .nav .top-logo-mobile{display:table-cell;left:calc(50% - 26.5px);float:none;}
 	.header-con .nav .gnb-wrap{display:none;}
 	.header-con .menu_btn{display:block;}
-	.section .article .contents .with .board_ceo{padding:0 20px;}
+	.consulting{padding:200px 0 0!important;}
+	.section .article .contents>h3{height:35px;line-height:35px;padding:0 20px;font-size:35px;font-weight:700;}
+	.section .article .contents>h3 span{height:35px;line-height:35px;}
+	.section .article .contents .with .board_word{padding-top:8px;padding-left:20px;font-size:17px;}
+	.section .article .contents .with .board_ceo{width:calc(100% - 40px);}
+	.section .article .contents .with .kakao_consulting{display:block;width:187px;right:7%;}
+	.section .article .contents .with .kakao_consulting_mobile{display:none;}
 }
 @media all and (min-width:1081px) and (max-width:1280px){
 	.header-con .nav .top-logo{display:table-cell;width:150px;left:15px;float:none;}
     .header-con .nav .top-logo-mobile{display:none;left:15px;float:none;}
 	.header-con .nav .gnb-wrap{display:block;} .header-con .nav .gnb-wrap>li{font-size:16px;}
 	.header-con .menu_btn{display:block;}
+	.consulting{padding:200px 0 0!important;}
+	.section .article .contents>h3{height:35px;line-height:35px;font-size:35px;font-weight:700;}
+	.section .article .contents>h3 span{height:35px;line-height:35px;}
+	.section .article .contents .with .board_word{padding-top:8px;padding-left:10px;font-size:20px;}
 	.section .article .contents .with .board_ceo{padding:0;}
+	.section .article .contents .with .kakao_consulting{display:block;width:238px;right:0;}
+	.section .article .contents .with .kakao_consulting_mobile{display:none;}
 }
 @media all and (min-width:1281px) and (max-width:1500px){
 	.header-con .nav .top-logo{display:table-cell;width:150px;left:15px;float:none;}
     .header-con .nav .top-logo-mobile{display:none;left:15px;float:none;}
 	.header-con .nav .gnb-wrap{display:block;} .header-con .nav .gnb-wrap>li{font-size:16px;}
 	.header-con .menu_btn{display:block;}
+	.consulting{padding:200px 0 0!important;}
+	.section .article .contents>h3{height:35px;line-height:35px;font-size:35px;font-weight:700;}
+	.section .article .contents>h3 span{height:35px;line-height:35px;}
+	.section .article .contents .with .board_word{padding-top:8px;padding-left:10px;font-size:20px;}
 	.section .article .contents .with .board_ceo{padding:0;}
+	.section .article .contents .with .kakao_consulting{display:block;width:238px;right:0;}
+	.section .article .contents .with .kakao_consulting_mobile{display:none;}
 }
 @media all and (min-width:1501px){
 	.header-con .nav .top-logo{display:table-cell;width:150px;left:15px;float:none;}
     .header-con .nav .top-logo-mobile{display:none;left:15px;float:none;}
 	.header-con .nav .gnb-wrap{display:block;} .header-con .nav .gnb-wrap>li{font-size:16px;}
 	.header-con .menu_btn{display:block;}
+	.consulting{padding:200px 0 0!important;}
+	.section .article .contents>h3{height:35px;line-height:35px;font-size:35px;font-weight:700;}
+	.section .article .contents>h3 span{height:35px;line-height:35px;}
+	.section .article .contents .with .board_word{padding-top:8px;padding-left:10px;font-size:20px;}
 	.section .article .contents .with .board_ceo{padding:0;}
+	.section .article .contents .with .kakao_consulting{display:block;width:238px;right:0;}
+	.section .article .contents .with .kakao_consulting_mobile{display:none;}
 }
