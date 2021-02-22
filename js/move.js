@@ -491,6 +491,25 @@ $(function(){
 			alert('모바일에서만 가능합니다.');
 		}
 	});
+	if (($('.greeting').find('.qna-board'))&&($('.greeting').find('.qna-board-mobile'))){
+		$('.qna-board').append('<ul class="qbox-wrap"></ul><ul class="abox-wrap"></ul>');
+		$('.qna-board-mobile').append('<ul class="qbox-wrap"></ul>');
+		Creat_qalist();
+	}
+	function Creat_qalist(){
+		var faq_data = './data/faq_data.json';
+		$.getJSON(faq_data, function(data){
+			$.each(data, function(I, item){
+				$('.qna-board').find('.qbox-wrap').append('<li class="qlist_'+item.idx+' on" data-list="'+item.idx+'"><a href="javascript:;">'+item.title+'</a></li>');
+				$('.qlist_0').css({'display':'none'});
+				$('.qna-board').find('.abox-wrap').append('<li class="alist_'+item.idx+'" data-list="'+item.idx+'"><ul><li class="faq_title">'+item.title+'</li><li class="faq_word">'+item.content+'</li></ul></li>');
+				$('.qna-board').find('.alist_0').html('<span>좌측의 질문을<br>선택해주세요<br></span>');
+				$('.qna-board').find('.alist_0').addClass('on');
+				$('.qna-board-mobile').find('.qbox-wrap').append('<li class="qlist_'+item.idx+' on" data-list="'+item.idx+'"><a href="javascript:;">'+item.title+'</a><ul class="abox"><li class="faq_title">'+item.title+'</li><li class="faq_word">'+item.content+'</li></ul></li>');
+				$('.qna-board-mobile').find('.qbox-wrap').children('.qlist_0, .alist_0').css({'display':'none'});
+			});
+		});
+	};
 	$('.qbox-wrap').on('click','a',function(){
 		var q_index=$(this).parent('li').data('list');
 		$('.qbox-wrap').find('li').removeClass('on');
