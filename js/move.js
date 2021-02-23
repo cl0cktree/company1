@@ -523,7 +523,7 @@ $(function(){
 	//----------------------------------
 	$('.kakao_consulting, .kakao_consulting_mobile').on('click',function(){
 		window.location.href = 'https://pf.kakao.com/_gIxbUK'; //채팅보다 채널추가가 우선일 경우 적용.
-		// window.location.href = 'https://pf.kakao.com/_gIxbUK//chat'; //채널추가보다 채팅이 우선일 경우 적용.
+		// window.location.href = 'https://pf.kakao.com/_gIxbUK/chat'; //채널추가보다 채팅이 우선일 경우 적용.
 	});
 	return false;
 });
