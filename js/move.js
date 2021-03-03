@@ -133,7 +133,7 @@ $(function(){
 						$('.nav').stop().css({'height':'70px','line-height':'70px'},200);
 					}
 					$('.top_btn').addClass('on');
-					if ((height_over>$name_section.height()+$name_footer.height()-50)&&(scroll_bottom<$name_footer.height())){
+					if ((height_over>$name_section.height()+$name_footer.height()-100)&&(scroll_bottom<$name_footer.height())){
 						$('.top_btn').css({'bottom':footer_height});
 					}else{
 						$('.top_btn').css({'bottom':'50px'});
